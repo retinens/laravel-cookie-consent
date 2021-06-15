@@ -60,8 +60,9 @@ abstract class TestCase extends OrchestraTestCase
 
     protected function isRefuseButtonDisplayed(string $html): bool
     {
-        return \Illuminate\Support\Str::contains($html,
-            trans('cookie-consent::texts.refuse'));
+        return \Illuminate\Support\Str::contains(
+            $html,
+            trans('cookie-consent::texts.refuse')
+        );
     }
-
 }
