@@ -19,7 +19,7 @@ class CookieConsent
             $cookie = Cookie::get(config('cookie-consent.cookie_name'));
             if (is_string($cookie)) {
                 $hasConsented = $cookie == "1";
-            }else{
+            } else {
                 $hasConsented = $cookie->getValue() == "1";
             }
         }
