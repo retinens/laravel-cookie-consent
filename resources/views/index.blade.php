@@ -3,9 +3,7 @@
     @include('cookie-consent::dialogContents')
 
     <script>
-
         window.laravelCookieConsent = (function () {
-
             const ACCEPT_COOKIE_VALUE = 1;
             const REFUSE_COOKIE_VALUE = 0;
             const COOKIE_DOMAIN = '{{ config('session.domain') ?? request()->getHost() }}';
@@ -13,6 +11,7 @@
             function consentWithCookies() {
                 setCookie('{{ $cookieConsentConfig['cookie_name'] }}', ACCEPT_COOKIE_VALUE, {{ $cookieConsentConfig['cookie_lifetime'] }});
                 hideCookieDialog();
+                document.location.reload();
             }
 
             function refuseCookies() {

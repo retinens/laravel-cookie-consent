@@ -1,27 +1,23 @@
 {
-    "name": "spatie/cookie-consent",
+    "name": "retinens/cookie-consent",
     "description": "Make your Laravel app comply with the crazy EU cookie law",
     "keywords": [
-        "spatie",
+        "retinens",
         "cookie-consent",
         "cookie",
+        "laravel",
+        "refuse",
         "comply",
         "law",
         "eu"
     ],
-    "homepage": "https://github.com/spatie/cookie-consent",
+    "homepage": "https://github.com/retinens/cookie-consent",
     "license": "MIT",
     "authors": [
         {
-            "name": "Freek Van der Herten",
-            "email": "freek@spatie.be",
-            "homepage": "https://spatie.be",
-            "role": "Developer"
-        },
-        {
-            "name": "Willem Van Bockstal",
-            "email": "willem@spatie.be",
-            "homepage": "https://spatie.be",
+            "name": "Lucas Houssa",
+            "email": "lucas@retinens.com",
+            "homepage": "https://retinens.com",
             "role": "Developer"
         }
     ],
@@ -38,12 +34,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\CookieConsent\\": "src"
+            "Retinens\\CookieConsent\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\CookieConsent\\Test\\": "tests"
+            "Retinens\\CookieConsent\\Test\\": "tests"
         }
     },
     "scripts": {
@@ -52,7 +48,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\CookieConsent\\CookieConsentServiceProvider"
+                "Retinens\\CookieConsent\\CookieConsentServiceProvider"
             ]
         }
     },
