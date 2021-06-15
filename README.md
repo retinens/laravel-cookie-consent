@@ -1,4 +1,4 @@
-# Make your Laravel app comply with the crazy EU cookie law
+# Make your Laravel app comply with the refuse/accept cookie law
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/retinens/laravel-cookie-consent.svg?style=flat-square)](https://packagist.org/packages/retinens/laravel-cookie-consent)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
@@ -10,9 +10,9 @@ All sites owned by EU citizens or targeted towards EU citizens must comply with 
 
 The users should be presented the option to agree or disagree with the optional cookies.
 
-The good folks at Spatie have created this great package, and I wanted to add the refuse button.
+This package is based on the spatie/laravel-cookie-consent package by the good folks at Spatie.
 
-This package provides an easily configurable view to display the message. Also included is JavaScript code to set a cookie when a user agrees with the cookie policy. The user can also disagree, and the cookie is set the 0. The package will not display the dialog when that cookie has been set.
+This package provides an easily configurable view to display the message. Also included is JavaScript code to set a cookie when a user agrees or disagrees with the cookie policy. The user can also disagree, and the cookie is set the 0. The package will not display the dialog when that cookie has been set.
 
 ## Installation
 
@@ -52,9 +52,9 @@ return [
     'cookie_name' => 'laravel_cookie_consent',
 
     /*
-     * Set the cookie duration in days.  Default is 365 * 20.
+     * Set the cookie duration in days.  Default is 365 * 1.
      */
-    'cookie_lifetime' => 365 * 20,
+    'cookie_lifetime' => 365 * 1,
 ];
 ```
 
@@ -77,7 +77,7 @@ When the user clicks "Allow cookies" a `laravel_cookie_consent` cookie will be s
 
 ## Refuse button
 
-If you want to add a refuse button to the dialog, you can enable the option in the config file. When the user clicks "Refuse non-essential cookies" a `laravel_cookie_consent` cookie will be set with the value of `0`
+If you want to add a refuse button to the dialog, you can enable the option in the config file. When the user clicks on "Refuse non-essential cookies" a `laravel_cookie_consent` cookie will be set with the value of `0`.
 
 ## Customising the dialog texts
 
@@ -130,6 +130,16 @@ class Kernel extends HttpKernel
 
 This will automatically add `cookie-consent::index` to the content of your response right before the closing body tag.
 
+## Helper
+
+In your code you can use the facade to get the info if the user has accepted or not the non-essential cookies.
+```php
+CookieConsent::hasConsented();
+CookieConsent::hasRefused();
+```
+
+That way you can (or not) add cookies for the user, or add scripts into the header.
+
 ## Notice
 The legislation is pretty very vague on how to display the warning, which texts are necessary, and what options you need to provide. This package will go a long way towards compliance, but if you want to be 100% sure that your website is ok, you should consult a legal expert.
 
@@ -149,13 +159,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security
 
-If you discover any security-related issues, please email freek@retinens.be instead of using the issue tracker.
-
-## Credits
-
-- [Freek Van der Herten](https://github.com/freekmurze)
-- [Willem Van Bockstal](https://github.com/willemvb)
-- [All Contributors](../../contributors)
+If you discover any security-related issues, please email lucas@retinens.com instead of using the issue tracker.
 
 ## License
 

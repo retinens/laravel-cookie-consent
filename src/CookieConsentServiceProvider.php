@@ -24,6 +24,9 @@ class CookieConsentServiceProvider extends PackageServiceProvider
 
                 $view->with(compact('alreadyConsentedWithCookies', 'cookieConsentConfig'));
             });
+        $this->app->bind('cookie-consent', function($app) {
+            return new \Retinens\CookieConsent\CookieConsent();
+        });
     }
 
     public function packageBooted(): void
