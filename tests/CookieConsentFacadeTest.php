@@ -34,6 +34,4 @@ class CookieConsentFacadeTest extends TestCase
         request()->cookies->set(config('cookie-consent.cookie_name'), cookie(config('cookie-consent.cookie_name'), 0));
         $this->assertTrue(CookieConsent::hasRefused());
     }
-
-
 }
