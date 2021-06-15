@@ -3,7 +3,6 @@
 
 namespace Retinens\CookieConsent;
 
-
 use Illuminate\Support\Facades\Cookie;
 
 class CookieConsent
@@ -29,7 +28,6 @@ class CookieConsent
 
     public function hasRefused(): bool
     {
-        return !$this->userHasConsented;
+        return ! $this->userHasConsented;
     }
-
 }
