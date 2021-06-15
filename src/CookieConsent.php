@@ -17,7 +17,12 @@ class CookieConsent
         $dismissedTheAlert = Cookie::has($cookieConsentConfig['cookie_name']);
         $hasConsented = false;
         if ($dismissedTheAlert) {
-            $hasConsented = Cookie::get(config('cookie-consent.cookie_name'))->getValue() == "1";
+            $cookie = Cookie::get(config('cookie-consent.cookie_name'));
+            if (is_string($cookie)) {
+                $hasConsented = $cookie == "1";
+            }else{
+                $hasConsented = $cookie->getValue() == "1";
+            }
         }
         $this->userHasConsented = $dismissedTheAlert && $hasConsented;
     }
