@@ -1,10 +1,10 @@
 <?php
 
-namespace Spatie\CookieConsent\Test;
+namespace Retinens\CookieConsent\Test;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Spatie\CookieConsent\CookieConsentMiddleware;
+use Retinens\CookieConsent\CookieConsentMiddleware;
 
 class CookieConsentMiddlewareTest extends TestCase
 {

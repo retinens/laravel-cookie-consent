@@ -184,7 +184,7 @@ All notable changes to `cookie-consent` will be documented in this file
 
 ** this version does not work on PHP 5.6 **
 
-- added `Spatie\CookieConsent\CookieConsentMiddleware`
+- added `Retinens\CookieConsent\CookieConsentMiddleware`
 
 ## 1.3.0 - 2016-09-07
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace Spatie\CookieConsent\Test;
+namespace Retinens\CookieConsent\Test;
 
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
-use Spatie\CookieConsent\CookieConsentServiceProvider;
+use Retinens\CookieConsent\CookieConsentServiceProvider;
 
 abstract class TestCase extends OrchestraTestCase
 {

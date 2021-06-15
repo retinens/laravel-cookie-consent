@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\CookieConsent\Test;
+namespace Retinens\CookieConsent\Test;
 
 class CookieConsentTest extends TestCase
 {

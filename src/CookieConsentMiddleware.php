@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\CookieConsent;
+namespace Retinens\CookieConsent;
 
 use Closure;
 use Illuminate\Http\Response;
