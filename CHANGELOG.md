@@ -2,6 +2,14 @@
 
 All notable changes to `cookie-consent` will be documented in this file
 
+## 4.1.1 2021-06-15
+
+ - Added facade helper
+ 
+## 4.0.0 2021-06-15
+
+ - Added refuse functionnality
+
 ## 3.1.1 - 2021-05-28
 
 - added bengali translation (#160)
